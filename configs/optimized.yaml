@@ -1,0 +1,23 @@
+train:
+  data_root: "Images"
+  image_size: 224
+  batch_size: 16 # Smaller batch for better gradient updates
+  num_workers: 2
+  num_classes: 2
+  class_names: ["Stroke", "Normal"]
+  epochs: 100 # More epochs for convergence
+  lr: 0.0001 # Lower learning rate for fine-tuning
+  weight_decay: 0.0001
+  early_stopping_patience: 20 # More patience
+  val_split: 0.2
+  seed: 42
+  checkpoint_dir: "checkpoints"
+  use_pretrained: true # Use pre-trained models
+  use_augmentation: true # Enable data augmentation
+
+federated:
+  server_address: "127.0.0.1:8080"
+  num_clients: 5 # More clients for better federated learning
+  rounds: 50 # More rounds for convergence
+  fraction_fit: 1.0
+  fraction_eval: 1.0
