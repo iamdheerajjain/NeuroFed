@@ -4,6 +4,13 @@ import torch.nn.functional as F
 from PIL import Image
 import numpy as np
 import os
+import sys
+
+# Ensure project root is on sys.path for Streamlit/Cloud
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 from src.config import load_config
 from src.models.improved_cnn import build_model as build_improved_cnn
 from src.data.transforms import get_medical_transforms

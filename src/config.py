@@ -10,8 +10,8 @@ class TrainConfig:
     image_size: int = 224
     batch_size: int = 16
     num_workers: int = 2
-    num_classes: int = 3
-    class_names: List[str] = field(default_factory=lambda: ["ischemic", "hemorrhagic", "normal"])
+    num_classes: int = 2
+    class_names: List[str] = field(default_factory=lambda: ["Stroke", "Normal"])
     epochs: int = 10
     lr: float = 1e-3
     weight_decay: float = 1e-4
