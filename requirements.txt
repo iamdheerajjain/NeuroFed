@@ -1,6 +1,6 @@
 # Core ML and Deep Learning (CPU-only)
-torch==2.4.1
-torchvision==0.19.1
+torch>=2.5.0
+torchvision>=0.20.0
 
 # Image Processing
 Pillow==10.4.0
