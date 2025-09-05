@@ -98,7 +98,7 @@ def main():
         
         if uploaded_file is not None:
             # Check if model checkpoint exists
-            checkpoint_path = "checkpoints/best_epoch_64.pt"
+            checkpoint_path = "checkpoints/best_epoch_62.pt"
             config_path = "configs/optimized.yaml"
             
             if not os.path.exists(checkpoint_path):
