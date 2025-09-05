@@ -172,7 +172,7 @@ def predict_image(image_path, checkpoint_path, config_path, use_pretrained=True)
 def main():
     parser = argparse.ArgumentParser(description="Predict brain stroke from image")
     parser.add_argument("image_path", help="Path to the brain image file")
-    parser.add_argument("--checkpoint", type=str, default="checkpoints/best_epoch_64.pt", 
+    parser.add_argument("--checkpoint", type=str, default="checkpoints/best_epoch_62.pt", 
                        help="Path to model checkpoint")
     parser.add_argument("--config", type=str, default="configs/optimized.yaml",
                        help="Path to configuration file")

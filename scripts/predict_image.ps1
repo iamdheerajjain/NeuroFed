@@ -1,7 +1,7 @@
 param(
     [Parameter(Mandatory=$true)]
     [string]$ImagePath,
-    [string]$CheckpointPath = "checkpoints/best_epoch_64.pt",
+    [string]$CheckpointPath = "checkpoints/best_epoch_62.pt",
     [string]$ConfigPath = "configs/optimized.yaml"
 )
 
