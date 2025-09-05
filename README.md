@@ -1,4 +1,4 @@
-# 🧠 Brain Stroke Detection using Federated Deep Learning
+# NeuroFed - 🧠 Brain Stroke Detection using Federated Deep Learning
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org)
@@ -218,3 +218,6 @@ main()
 ```
 
 ### Sample Results
+
+![op1](op1.png)
+![op2](op2.png)
