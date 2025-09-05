@@ -197,31 +197,6 @@ main()
 - **Data Augmentation**: Medical image-specific transformations
 - **Validation Monitoring**: Real-time performance tracking
 
-## 🌐 Federated Learning
-
-### Federated Architecture
-
-```
-Federated Server
-├── Client 1 (Hospital A)
-├── Client 2 (Hospital B)
-├── Client 3 (Hospital C)
-└── Global Model Aggregation
-```
-
-### Federated Training
-
-```bash
-# Run federated simulation
-python -m src.federated.simulate --config configs/optimized.yaml
-```
-
-### Federated Features
-
-- **Privacy Preservation**: Data remains on local clients
-- **Distributed Training**: Collaborative model improvement
-- **FLWR Framework**: Industry-standard federated learning
-- **Configurable Clients**: Adjustable number of participants
 
 ## 📊 Results & Visualization
 
