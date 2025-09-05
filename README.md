@@ -88,24 +88,39 @@ src/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/brain-stroke-detection.git
-cd brain-stroke-detection
+git clone https://github.com/iamdheerajjain/NeuroFed.git
+cd NeuroFed
 ```
 
-### 2. Install Dependencies
+### 2. Create a Virtual Environment
 
 ```bash
+# Create new virtual environment
+python -m venv .venv
+
+# Activate it
+.venv\Scripts\activate    # Windows
+source .venv/bin/activate # Mac/Linux
+
+# Install dependencies
 pip install -r requirements.txt
+```
+
+### 3. Run Training (Command Line)
+
+```bash
+# Using PowerShell script
+.\scripts\run_improved_training.ps1
 ```
 
 ### 3. Run Prediction (Command Line)
 
 ```bash
 # Using PowerShell script
-.\scripts\predict_image.ps1 "path/to/brain/image.jpg"
+.\scripts\predict_image.ps1 -ImagePath "path/to/your/image.jpg"
 
-# Direct Python command
-python -m src.predict "path/to/image.jpg" --use_pretrained
+# Enhanced prediction with better accuracy
+python -m src.enhanced_predict "path/to/your/image.jpg" --checkpoint checkpoints/best_epoch_100.pt --config configs/optimized.yaml
 ```
 
 ### 4. Launch Web Interface
@@ -115,89 +130,6 @@ python -m src.predict "path/to/image.jpg" --use_pretrained
 # Open http://localhost:8501 in your browser
 ```
 
-## 📦 Installation
-
-### Prerequisites
-
-- Python 3.8 or higher
-- Windows 10/11 (PowerShell scripts)
-- CUDA-compatible GPU (optional, for faster training)
-
-### Dependencies
-
-```bash
-# Core dependencies
-torch>=1.9.0
-torchvision>=0.10.0
-Pillow>=8.0.0
-numpy>=1.21.0
-scikit-learn>=1.0.0
-
-# Visualization
-matplotlib>=3.5.0
-seaborn>=0.11.0
-
-# Web interface
-streamlit>=1.0.0
-
-# Configuration
-PyYAML>=6.0
-
-# Federated learning
-flwr>=1.0.0
-```
-
-### Environment Setup
-
-```bash
-# Create virtual environment
-python -m venv .venv
-
-# Activate environment (Windows)
-.venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-## 💻 Usage
-
-### Command Line Prediction
-
-#### Single Image Analysis
-
-```bash
-# Basic prediction
-python -m src.predict "Images/Normal/99 (1).jpg"
-
-# With custom checkpoint
-python -m src.predict "image.jpg" --checkpoint checkpoints/best_epoch_64.pt
-
-# Using custom CNN model
-python -m src.predict "image.jpg" --use_pretrained false
-```
-
-#### PowerShell Scripts
-
-```bash
-# Predict single image
-.\scripts\predict_image.ps1 "path/to/image.jpg"
-
-# Run visualization
-.\scripts\run_visualization.ps1
-
-# Open results report
-.\scripts\open_report.ps1
-```
-
-### Web Interface
-
-#### Launch Web App
-
-```bash
-.\scripts\run_web_app.ps1
-```
-
 #### Features
 
 - **Drag & Drop**: Upload brain scan images
@@ -205,25 +137,6 @@ python -m src.predict "image.jpg" --use_pretrained false
 - **Confidence Scoring**: Detailed probability breakdown
 - **Medical Interpretation**: Clinical guidance
 - **Responsive Design**: Works on desktop and mobile
-
-### Model Training
-
-#### Centralized Training
-
-```bash
-# Run improved training
-.\scripts\run_improved_training.ps1
-
-# Run basic training
-.\scripts\run_centralized.ps1
-```
-
-#### Federated Learning
-
-```bash
-# Run federated simulation
-.\scripts\run_federated_sim.ps1
-```
 
 ## 🔧 Configuration
 
