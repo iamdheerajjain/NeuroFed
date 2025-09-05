@@ -3,12 +3,12 @@ torch>=2.5.0
 torchvision>=0.20.0
 
 # Image Processing
-Pillow==10.4.0
-opencv-python-headless==4.12.0.88
+Pillow>=10.4.0
+opencv-python-headless>=4.12.0.88
 numpy>=2.0.0,<2.3.0
 
 # Web Interface
-streamlit==1.28.2
+streamlit>=1.39.0
 
 # Data Science and Visualization
 matplotlib>=3.7.5
@@ -25,3 +25,6 @@ flwr>=1.11.1
 
 # Additional dependencies for medical imaging
 scikit-image>=0.21.0
+
+# Additional dependencies for compatibility
+typing-extensions>=4.0.0
